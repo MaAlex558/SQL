@@ -1,0 +1,11 @@
+idmobile_db,mobile_name,produce_company,country,price,quantity
+8,"Galaxy S23",Samsung,"South korea",1000,4
+9,"Galaxy Z Fold4",Samsung,"South korea",1200,1
+10," Galaxy Z Flip4",Samsung,"South korea",1280,2
+11,"iPhone 11",Apple,USA,800,5
+12,"iPhone 12",Apple,USA,900,4
+13,"iPhone 13",Apple,USA,1000,3
+14,"iPhone 14 Pro",Apple,USA,1250,1
+15,"Redmi Note 11",Xiaomi,China,500,2
+16,"Poco M5S",Xiaomi,China,600,5
+17,"Poco F5 Pro",Xiaomi,China,700,6
