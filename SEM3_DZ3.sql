@@ -2,10 +2,10 @@ SELECT * FROM sem3_dz3.staff;
 
 -- Отсортируйте данные по полю заработная плата (salary) в порядке: возрастания
 
-SELECT * FROM staff ORDER BY sallary ASC
+SELECT * FROM staff ORDER BY sallary ASC;
 
 -- Отсортируйте данные по полю заработная плата (salary) в порядке: убывания
-SELECT * FROM staff ORDER BY sallary DESC 
+SELECT * FROM staff ORDER BY sallary DESC;
 
 -- Выведите 5 максимальных заработных плат (salary)
 SELECT * FROM (SELECT * FROM staff ORDER BY sallary DESC LIMIT 5) AS sallary ORDER BY sallary;
