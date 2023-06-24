@@ -57,3 +57,4 @@ name, cost,
 FROM cars) AS rank_list
 WHERE `dense_rank` = 1
 ORDER BY cost DESC;
+LIMIT 3;
