@@ -58,3 +58,15 @@ FROM cars) AS rank_list
 WHERE `dense_rank` = 1
 ORDER BY cost DESC;
 LIMIT 3;
+
+SELECT 
+ name,
+ MAX(cost) AS max_cost
+ 
+FROM
+    cars
+GROUP BY 
+name
+ORDER BY 
+max_cost DESC
+LIMIT 3
