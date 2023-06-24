@@ -35,3 +35,25 @@ CREATE VIEW Cars_limits AS
 SELECT id, name, cost 
 FROM cars
 WHERE name = `Skoda` and name = `Audi`;
+
+
+-- Получить ранжированный список автомобилей по цене в порядке возрастания
+SELECT 
+DENSE_RANK() OVER(PARTITION BY cars ORDER BY cost DESC) AS `dense_rank`,
+name, cost
+FROM cars ORDER BY cost DESC;
+
+-- Получить топ-3 самых дорогих автомобилей, а также их общую стоимость
+SELECT 
+DENSE_RANK() OVER(PARTITION BY name ORDER BY cost DESC) AS `dense_rank`,
+
+SELECT 
+name, cost,
+`dense_rank`
+FROM
+(SELECT 
+DENSE_RANK() OVER(PARTITION BY name ORDER BY cost DESC) AS `dense_rank`,
+name, cost,
+FROM cars) AS rank_list
+WHERE `dense_rank` = 1
+ORDER BY cost DESC;
